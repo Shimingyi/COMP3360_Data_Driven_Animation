@@ -1,5 +1,9 @@
 # COMP3360 Data Driven Animation
- The code repository of course COMP3360
+The code repository of course COMP3360
+
+Instructor: [Prof. Taku Komura](https://www.cs.hku.hk/index.php/people/academic-staff/taku)
+
+TAs: @[Mingyi Shi](https://rubbly.cn) , @[He Zhang](https://cghezhang.github.io) and @[Floyd Chitalu](https://github.com/chitalu)
 
 ![cover](https://user-images.githubusercontent.com/7709951/150430601-470046fb-7370-48cb-8ee5-af8765b6f064.png)
 
@@ -9,13 +13,13 @@ In this assignment, you will learn the basic data structure and animation creati
 
 All software-related codes will be provided by @[Mingyi Shi](https://rubbly.cn) and @[He Zhang](https://cghezhang.github.io), only the core codes need to be filled in.
 
-Details: [subfolder](./assignment_1)
+More details: [subfolder](./assignment_1)
 
 #### Assessments (due to 13th. Feb)
 
 * A rendered video with character animation (Quiz1, 15%)
-* BVH file reader and visualizer in Blender/Unity (45%)
-* An IK solver in Blender/Unity (30%)
+* BVH file visualizer in Blender/Unity (45%)
+* An IK solver in Unity (30%)
 * Report (10%)
 
 
