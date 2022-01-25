@@ -12,7 +12,7 @@ Submission: A compress file with [video_file, bvh_visualizer.py, CCDIK.cs, uid_n
 
 
 
-### Quiz 1 - A rendered video with character animation (15%)
+## Quiz 1 - A rendered video with character animation (15%)
 
 1. Download Blender
 2. Import the provided FBX file and check the mesh (*./data/angry_girl.fbx*)
@@ -26,7 +26,7 @@ Submission: A compress file with [video_file, bvh_visualizer.py, CCDIK.cs, uid_n
 
 
 
-### BVH visualizer  (45%)
+## BVH visualizer  (45%)
 
 1. Some blender examples have been prepared in ***example.py***, you can find how to add different mesh into Blender by python scripts and how to make animation with keyframing way
 2. The goal of this part is to understand basic motion data structure and know the mathematical operation between different data types, like rotation and position.
@@ -38,13 +38,13 @@ Submission: A compress file with [video_file, bvh_visualizer.py, CCDIK.cs, uid_n
 
 
 
-### IK solver (30%)
+## IK solver (30%)
+
+TBA
 
 
 
-
-
-### Report (10%)
+## Report (10%)
 
 1. No word limitation and requirement, just record your ideas. 
 
@@ -54,5 +54,5 @@ Submission: A compress file with [video_file, bvh_visualizer.py, CCDIK.cs, uid_n
 
 4. Try to answer these open questions:
 
-5. 1. Why rotation is more common? What's the problem if we only use joint position to record motion?
-   2. How about using IK in real-time gaming? Do you have any idea how to improve it?
+    1. Why rotation is more common? What's the problem if we only use joint position to record motion?
+    2. How about using IK in real-time gaming? Do you have any idea how to improve it?
