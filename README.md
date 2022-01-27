@@ -13,7 +13,7 @@ In this assignment, you will learn the basic data structure and animation creati
 
 All software-related codes will be provided by @[Mingyi Shi](https://rubbly.cn) and @[He Zhang](https://cghezhang.github.io), only the core codes need to be filled in.
 
-More details: [subfolder](./assignment_1)
+All the materials have been uploaded: [subfolder](./assignment_1)
 
 #### Assessments (due to 13th. Feb)
 

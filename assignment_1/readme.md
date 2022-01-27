@@ -44,7 +44,7 @@ Submission: A compress file with [video_file, bvh_visualizer.py, CCDIK.cs, uid_n
 2. Import the course project refer to the introductions in the tutorial slides.
 3. Try the provided IK script, and understand the meaning of IKTip, IKRoot, and IKTarget.
 4. For convenience, all the needed files and functions have been prepared in this project, so all your implements can be done in CCDIK.cs.
-5. To-Do: Open ***CCDIK.cs***, implement functions **SolveByCCD**. Two main tasks are required here, at first you need to solve Tip Position based on CCD solution, and then heuristic IK weight computation will be expected to improve the quality. 
+5. To-Do: Open ***CCDIK.cs***, implement function **SolveByCCD**. Two main tasks are required here, at first you need to solve Tip Position based on CCD solution, and then heuristic IK weight computation will be expected to improve the quality. 
 6. The code is expected to be runnable.
 
 
@@ -55,7 +55,7 @@ Submission: A compress file with [video_file, bvh_visualizer.py, CCDIK.cs, uid_n
 
 2. It's hard for TA to run all the scripts (maybe lots of bugs), so screenshots are expected to appear in this report to show your final results.
 
-3. If you cannot implement the functions, please explain more here to tell what method you tried and how does it not work. 
+3. If you cannot implement any feature, please explain what method you tried and how does it not work. 
 
 4. Try to answer these open questions:
 
