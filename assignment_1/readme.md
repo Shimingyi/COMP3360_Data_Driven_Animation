@@ -40,7 +40,12 @@ Submission: A compress file with [video_file, bvh_visualizer.py, CCDIK.cs, uid_n
 
 ## IK solver (30%)
 
-TBA
+1. Download Unity and activate the free personal license.
+2. Import the course project refer to the introductions in the tutorial slides.
+3. Try the provided IK script, and understand the meaning of IKTip, IKRoot, and IKTarget.
+4. For convenience, all the needed files and functions have been prepared in this project, so all your implements can be done in CCDIK.cs.
+5. To-Do: Open ***CCDIK.cs***, implement functions **SolveByCCD**. Two main tasks are required here, at first you need to solve Tip Position based on CCD solution, and then heuristic IK weight computation will be expected to improve the quality. 
+6. The code is expected to be runnable.
 
 
 
