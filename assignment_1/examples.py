@@ -14,9 +14,10 @@ def clear_objects():
 ## Add a new cuda, refer to https://docs.blender.org/api/current/bpy.ops.mesh.html#bpy.ops.mesh.primitive_cube_add
 def add_cube(location=[0, 0, 0], size=1):
     bpy.ops.mesh.primitive_cube_add(size=size)
-    c_obj = bpy.data.objects[bpy.context.active_object.name]
-    bpy.context.object.location = location
-    bpy.context.object.rotation_euler = [np.radians(0), np.radians(0), np.radians(0)]
+    c_obj = bpy.context.object
+    # c_obj = bpy.data.objects[bpy.context.active_object.name] # Another selection way
+    c_obj.location = location
+    c_obj.rotation_euler = [np.radians(0), np.radians(0), np.radians(0)]
     return c_obj
 
 ## Add a plane and materials
