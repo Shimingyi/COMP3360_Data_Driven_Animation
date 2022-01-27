@@ -15,6 +15,11 @@ All software-related codes will be provided by @[Mingyi Shi](https://rubbly.cn) 
 
 All the materials have been uploaded: [subfolder](./assignment_1)
 
+#### Tutorial Slides
+
+1. Data Stucture in Charater Animation [[slides](./tutorial1_data_structure.pdf)]
+2. Scripting with BVH file and IK solver [[slides](tutorial1_data_structure.pdf)]
+
 #### Assessments (due to 13th. Feb)
 
 * A rendered video with character animation (Quiz1, 15%)
