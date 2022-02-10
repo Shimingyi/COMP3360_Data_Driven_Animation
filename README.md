@@ -20,7 +20,7 @@ All the materials have been uploaded: [subfolder](./assignment_1)
 1. Data Stucture in Charater Animation [[slides](./tutorial1_data_structure.pdf)]
 2. Scripting with BVH file and IK solver [[slides](./tutorial2_scripting.pdf)]
 
-#### Assessments (due to 13th. Feb)
+#### Assessments (due to 11:59am, 18th. Feb)
 
 * A rendered video with character animation (Quiz1, 15%)
 * BVH file visualizer in Blender/Unity (45%)
