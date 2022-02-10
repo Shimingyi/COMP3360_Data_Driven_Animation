@@ -17,7 +17,7 @@ All software-related codes will be provided by @[Mingyi Shi](https://rubbly.cn/)
 
 ![](https://user-images.githubusercontent.com/7709951/150998067-5652b8aa-54fc-43e4-8eb6-2020ebe2067c.png)
 
-#### Tutorial Slides
+#### Tutorial Slides (2 Tutorials for each Assignment)
 
 1. Data Stucture in Charater Animation [[slides](../tutorial1_data_structure.pdf)]
 2. Scripting with BVH file and IK solver [[slides](../tutorial2_scripting.pdf)]
