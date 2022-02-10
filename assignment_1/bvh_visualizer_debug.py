@@ -4,8 +4,6 @@
 # Thanks to Daniel Holden, Peizhuo Li
 
 import re
-import bpy
-import mathutils
 import numpy as np
 
 class Quaternions:
@@ -559,71 +557,6 @@ def load(filename, start=None, end=None, order=None, world=False):
     rotations = Quaternions.from_euler(np.radians(rotations), order=order, world=world)
     return rotations, positions, offsets, parents, names, frametime
 
-def clear_objects():
-    bpy.ops.object.select_all(action='SELECT')
-    bpy.ops.object.delete()
-
-def add_bone(offset, parent_obj, name):
-    center = parent_obj.location + offset / 2
-    length = offset.dot(offset) ** 0.5
-
-    base = mathutils.Vector((0., 0., 1.))
-    target = offset.normalized()
-    axis = base.cross(target)
-    theta = np.math.acos(base.dot(target))
-    rot = mathutils.Quaternion(axis, theta)
-
-    bpy.ops.mesh.primitive_cone_add(vertices=5, radius1=0.022 * 10, radius2=0.0132 * 10, depth=length, enter_editmode=False, location=center)
-    new_bone = bpy.context.object
-    new_bone.name = name
-    new_bone.rotation_mode = 'QUATERNION'
-    new_bone.rotation_quaternion = rot
-
-    set_parent(parent_obj, new_bone)
-
-    return new_bone
-
-def add_joint(location, parent_obj, name):
-    bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=3, radius=0.001, enter_editmode=False, location=location)
-    new_joint = bpy.context.object
-    if parent_obj is not None:
-        set_parent(parent_obj, new_joint)
-        pass
-    new_joint.name = name
-
-    return new_joint
-
-def set_parent(parent, child):
-    child.parent = parent
-    child.matrix_parent_inverse = parent.matrix_world.inverted()
-
-## Example - Use rotation and location as keyframe feature
-def build_reset_skeleton(offsets, parents, names, joint, parent_obj, all_obj):
-    if joint != 0:
-        offset = mathutils.Vector(offsets[joint])
-        new_bone = add_bone(offset, parent_obj, names[joint] + '_bone')
-        new_joint = add_joint(parent_obj.location + offset, new_bone, names[joint] + '_end')
-        all_obj.append(new_bone)
-        all_obj.append(new_joint)
-    else:
-        new_joint = add_joint(mathutils.Vector((0., 0., 0.)), None, names[joint] + '_end')
-        all_obj.append(new_joint)
-
-    for i in range(len(parents)):
-        if parents[i] == joint:
-            build_reset_skeleton(offsets, parents, names, i, new_joint, all_obj)
-
-def set_animation(joints, positions, rotations, frametime):
-    bpy.context.scene.frame_start = 0
-    bpy.context.scene.frame_end = rotations.shape[0] - 1
-    bpy.context.scene.render.fps = int(1 / frametime)
-    for frame in range(rotations.shape[0]):
-        joints[0].location = positions[frame, 0, :]
-        joints[0].keyframe_insert(data_path='location', frame=frame)
-        for j in range(rotations.shape[1]):
-            joints[j].rotation_mode = 'QUATERNION'
-            joints[j].rotation_quaternion = mathutils.Quaternion(rotations[frame, j])
-            joints[j].keyframe_insert(data_path='rotation_quaternion', frame=frame)
 
 '''
 Your implement here: Convert offsets to global joint positions
@@ -657,7 +590,6 @@ def set_cube_animation(joints, rotations, root_position, parents, frametime):
     return
 
 
-clear_objects()
 
 ## rotation - Quaternion class
 '''
@@ -670,13 +602,12 @@ parents     -   np.array with shape (joint_number)
 rotations, positions, offsets, parents, names, frametime = load(filename='./assignment1/data/motion_files/motion_basket.bvh')
 rotations.qs, positions, offsets = rotations.qs[..., [0, 3, 1, 2]], positions[..., [2, 0, 1]], offsets[..., [2, 0, 1]]
 
-all_obj = []
-build_reset_skeleton(offsets, parents, names, 0, None, all_obj)
-all_joints = []
-for j in range(rotations.shape[1]):
-    name = names[j]
-    for obj in all_obj:
-        if obj.name == name + '_end':
-            all_joints.append(obj)
-set_animation(all_joints, positions, rotations.qs, frametime)
-bpy.ops.object.select_all(action='DESELECT')
+# A toy example
+joint_1 = [1, 0, 0]
+joint_2 = [2, 0, 0]
+joint_3 = [3, 0, 0]
+joint_1_rotatation = [0, 0, 45]
+joint_2_rotatation = [0, 0, 45]
+
+# The answer is 
+joint_3_updated = ?
