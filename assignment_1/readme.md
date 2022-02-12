@@ -5,6 +5,7 @@
 ## Hightlights (11th, Feb)
 
 - The bvh visualizer should be implemented by **inserting locations** as keyframes rather than rotation, hence a **forward kinamatic function** will be expected to be here to convert the joint rotation to position. 
+- A basic implementation has been provided for CCDIK solver, you should understand it and try to optimize it. Also, there are different weigth calculation way, you should find the difference between them and report the performance. [[requirment](https://github.com/Shimingyi/COMP3360_Data_Driven_Animation/tree/main/assignment_1#ik-solver-30)]
 - Check the [Tips](https://github.com/Shimingyi/COMP3360_Data_Driven_Animation/tree/main/assignment_1#tips ) if you meet runtime problems or stuggled in debugging. 
 
 
@@ -82,20 +83,29 @@ Requirements:
 
 ## IK solver (30%)
 
-1. Download Unity and activate the free personal license.
-2. Import the course project refer to the introductions in the tutorial slides.
-3. Try the provided IK script, and understand the meaning of IKTip, IKRoot, and IKTarget.
-4. For convenience, all the needed files and functions have been prepared in this project, so all your implements can be done in CCDIK.cs.
-5. To-Do: Open ***CCDIK.cs***, implement function **SolveByCCD**. Two main tasks are required here, at first you need to solve Tip Position based on CCD solution, and then heuristic IK weight computation strategy will be used to improve the quality. 
-6. The code is expected to be runnable.
+- Download Unity and activate the free personal license.
+
+- Import the course project refer to the introductions in the tutorial slides.
+
+- Try the provided IK script, and understand the meaning of IKTip, IKRoot, and IKTarget.
+
+- For convenience, all the needed files and functions have been prepared in this project, so all your implements can be done in CCDIK.cs.
+
+Requirements:
+
+1. To-Do: Open ***CCDIK.cs***, implement function **SolveByCCD**. A basic implementation has been provided for CCDIK solver, you should understand it and try to optimize it. 
+2. Answer these question in your report:
+   1. Try different iteration value, report the differentce between them in visual performance and runtime performance. How can choose it in the real-application design? (10%)
+   2.  Try different weight value, report the differentce between them in visual performance. Can you find a better way to calculate weight? (15%)
+   3. (Bones) Is there a better way to implement CCD rather than our one line code? You can seek available online resources and improve the basic implementation. (5~15%)
 
 
 
 ## Report (10%)
 
-1. No word limitation and requirement, just record your ideas. 
+1. No word limitation and requirement, just record necessary anwsers and your idea.
 
-2. It's hard for TA to run all the scripts (maybe lots of bugs), so screenshots are expected to appear in this report to show your final results.
+2. It's hard for TA to run all the scripts (maybe lots of bugs), so screenshots are expected to appear in this report to show your final results. 
 
 3. If you cannot implement any feature, please explain what method you tried and how does it not work. 
 
