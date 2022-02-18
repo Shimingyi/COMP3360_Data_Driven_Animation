@@ -94,10 +94,10 @@ Requirements:
 Requirements:
 
 1. To-Do: Open ***CCDIK.cs***, implement function **SolveByCCD**. A basic implementation has been provided for CCDIK solver, you should understand it and try to optimize it. 
-2. Answer these question in your report:
+2. Answer these questions in your report:
    1. Try different iteration value, report the differentce between them in visual performance and runtime performance. How can choose it in the real-application design? (10%)
    2.  Try different weight value, report the differentce between them in visual performance. Can you find a better way to calculate weight? (15%)
-   3. (Bones) Is there a better way to implement CCD rather than our one line code? You can seek available online resources and improve the basic implementation. (5~15%)
+   3. (Bones) Is there a better way to implement CCD rather than our one line code? If yes, implement it. You can seek available online resources and improve the basic implementation. (5~15%)
 
 
 
