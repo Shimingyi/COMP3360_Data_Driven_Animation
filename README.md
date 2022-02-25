@@ -31,8 +31,7 @@ All the materials have been uploaded: [subfolder](./assignment_1)
 
 ## Assignment 2 - Data Driven Character Animation
 
-In this assignment, you will learn the basic knowledge of sequential prediction with a deep neural network and learn the specifications which are useful in character animation.
-The TAs will provide a runnable character animation framework that includes all the data processing, training/testing, and visualization functions, but the network works not well on human motion data. You are required to modify the data flow or network structure to make it available. (due to 13th. March )
+Coming soon.
 
 
 
