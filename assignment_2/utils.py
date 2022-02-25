@@ -220,7 +220,7 @@ class Quaternions:
         q2 = q[...,2]
         q3 = q[...,3]
         es = np.zeros(self.shape + (3,))
-        if   order == 'xyz':
+        if order == 'xyz':
             es[...,0] = np.arctan2(2 * (q0 * q1 + q2 * q3), 1 - 2 * (q1 * q1 + q2 * q2))
             es[...,1] = np.arcsin((2 * (q0 * q2 - q3 * q1)).clip(-1,1))
             es[...,2] = np.arctan2(2 * (q0 * q3 + q1 * q2), 1 - 2 * (q2 * q2 + q3 * q3))
@@ -440,7 +440,7 @@ ordermap = {
     'z' : 2,
 }
 
-def load(filename, start=None, end=None, order=None, world=False):
+def load(filename, start=None, end=None, order=None, world=False, return_eular=False):
     f = open(filename, "r")
 
     i = 0
@@ -548,8 +548,12 @@ def load(filename, start=None, end=None, order=None, world=False):
             i += 1
 
     f.close()
-    rotations = Quaternions.from_euler(np.radians(rotations), order=order, world=world)
-    return rotations, positions, offsets, parents, names, frametime
+    rotations_eular = np.radians(rotations)
+    rotations_q = Quaternions.from_euler(np.radians(rotations), order=order, world=world)
+    if return_eular:
+        return rotations_eular, positions, offsets, parents, names, frametime
+    else:
+        return rotations_q, positions, offsets, parents, names, frametime
 
 
 def save(filename, rotations, positions, offsets, parents, names=None, frametime=1.0/24.0, order='zyx', save_positions=False, save_global=True):
@@ -683,3 +687,14 @@ def FK(rotations, offsets, root_position, parents, local=False):
         global_position[:, joint_idx] = global_position[:, parent_idx] + rotated_vector
         transforms[:, joint_idx] = np.matmul(transforms[:, parent_idx], transforms[:, joint_idx]) 
     return global_position
+
+
+def Bezier(points, downsampling=5):
+    def aj_point(points, t):
+        while len(points) > 1:
+            linestring = zip(points[:-1], points[1:])
+            points = [(1 - t) * p1 + t * p2 for p1, p2 in linestring]
+        return points[0]
+    points = points[np.arange(0, len(points), downsampling)]
+    last_point = len(points) - 1
+    return [aj_point(points, i / last_point) for i in range(len(points))]
