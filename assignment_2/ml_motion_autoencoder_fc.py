@@ -10,8 +10,8 @@ from utils import FK, load, save, Quaternions
 from torch.utils.data import Dataset, DataLoader
 
 ## Training hyper parameters
-epoch = 50
-batch_size = 128
+epoch = 20
+batch_size = 256
 learning_rate = 1e-3
 
 ## Model parameters
@@ -179,11 +179,12 @@ if __name__ == '__main__':
     real_root_positions = np.concatenate(real_root_positions, axis=0).reshape((-1, 3))
     file_names_set = set(file_names)
     pre_rotations[:, 0] = real_rotations[:, 0]
+    os.mkdir('./output/autoencoder_fc') if not os.path.exists('./output/autoencoder_fc') else None
     for file_name in file_names_set:
         frame_indices = np.where(np.array(file_names)==file_name)[0]
         frame_number = frame_indices.shape[0]
-        pre_rotation = Quaternions(pre_rotations[frame_indices]) if model_rotation_type is 'q' else Quaternions.from_euler(pre_rotations[frame_indices], order='zyx')
-        real_rotation = Quaternions(real_rotations[frame_indices]) if model_rotation_type is 'q' else Quaternions.from_euler(real_rotations[frame_indices], order='zyx')
+        pre_rotation = Quaternions(pre_rotations[frame_indices]) if model_rotation_type == 'q' else Quaternions.from_euler(pre_rotations[frame_indices], order='zyx')
+        real_rotation = Quaternions(real_rotations[frame_indices]) if model_rotation_type == 'q' else Quaternions.from_euler(real_rotations[frame_indices], order='zyx')
         positions = np.zeros((frame_number, joint_number, 3))
         positions[:, 0] = real_root_positions[frame_indices]
         save('./output/autoencoder_fc/gt_%s' % file_name, real_rotation.normalized(), positions, train_dataset.offsets, train_dataset.parents, train_dataset.names, train_dataset.frametime*4)
