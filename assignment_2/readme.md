@@ -1,6 +1,8 @@
 # Assignment 2 - Motion Processing with Deep Learning
 
+![cover](https://user-images.githubusercontent.com/7709951/155896101-ba7aeed2-262d-40a0-9732-faee93d9b61b.gif)
 
+Image copyright: Robust Motion In-betweening, Félix G. Harvey
 
 ## Introduction 
 
@@ -83,7 +85,7 @@ Recommended Reading: A deep learning framework for character motion synthesis an
 
 1. Two template files: [todo_ml_motion_denoising.py](./todo_ml_motion_denoising.py) and [todo_ml_motion_interpolation.py](./todo_ml_motion_interpolation.py) 
 
-   You should complete the model structure definition and complete the model training and evaluation. You can take any code snippets from example files to help you finish that.
+   You should complete the model structure definition and complete the model training and evaluation. You can take any code snippets from example files to help you finish that or try to use other structures like RNN or Conv2D to solve it. 
 
 2. We provided the dataloader for the training. Basically, four variables will be token out per batch: [batch_rotations (B, T, J, R), batch_rotations_noised  (B, T, J, R), batch_root_positions (B, T, 3), file_name (B)]. You should set up two things: Firstly, how many frames you want to feed into the network in each forwarding, we [set it to 1](./ml_motion_autoencoder_fc.py#L121) for fully connected example, and 15 for convolution example; Secondly, how do you operate the joint rotation features, [flattening](./ml_motion_autoencoder_fc.py#L139) them to one dimensional is one option, you should think about it with your network design. 
 
