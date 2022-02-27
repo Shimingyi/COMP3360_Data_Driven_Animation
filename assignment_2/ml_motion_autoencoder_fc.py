@@ -10,8 +10,8 @@ from utils import FK, load, save, Quaternions
 from torch.utils.data import Dataset, DataLoader
 
 ## Training hyper parameters
-epoch = 20
-batch_size = 256
+epoch = 50
+batch_size = 128
 learning_rate = 1e-3
 
 ## Model parameters
