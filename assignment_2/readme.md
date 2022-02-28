@@ -44,7 +44,7 @@ Interpolation is commonly used in the animation industry. For example, it happen
 
 1. Two template files: [todo_motion_interpolation.py](./todo_motion_interpolation.py) and [todo_motion_concatenation.py](./todo_motion_concatenation.py) 
 
-   You should complete the apply_interpolation function with your idea and then test them in two subtasks - keyframe interpolation and motion concatenation. The implementation can be identical in these two files. 
+   You should complete the apply_interpolation function with **two interpolation algorithms** and then test them in two subtasks - keyframe interpolation and motion concatenation. The implementation can be same in these two files, and any interpolation algorithm is allowed to use. 
 
 2. Report: For the keyframe interpolation task, report the performance of different interpolation algorithms when given different [OFFSET](./todo_motion_interpolation.py#L38) values, like 24, 48, 72, 96, and 124. 
 
@@ -85,7 +85,7 @@ Recommended Reading: A deep learning framework for character motion synthesis an
 
 1. Two template files: [todo_ml_motion_denoising.py](./todo_ml_motion_denoising.py) and [todo_ml_motion_interpolation.py](./todo_ml_motion_interpolation.py) 
 
-   You should complete the model structure definition and complete the model training and evaluation. You can take any code snippets from example files to help you finish that or try to use other structures like RNN or Conv2D to solve it. 
+   You should complete the **model structure definition** and complete the **model training and evaluation**. You can take any code snippets from example files to help you finish that or try to use other structures like RNN or Conv2D to solve it. Any other function or modification on the template file is also allowed. 
 
 2. We provided the dataloader for the training. Basically, four variables will be token out per batch: [batch_rotations (B, T, J, R), batch_rotations_noised  (B, T, J, R), batch_root_positions (B, T, 3), file_name (B)]. You should set up two things: Firstly, how many frames you want to feed into the network in each forwarding, we [set it to 1](./ml_motion_autoencoder_fc.py#L121) for fully connected example, and 15 for convolution example; Secondly, how do you operate the joint rotation features, [flattening](./ml_motion_autoencoder_fc.py#L139) them to one dimensional is one option, you should think about it with your network design. 
 
@@ -98,7 +98,7 @@ Recommended Reading: A deep learning framework for character motion synthesis an
 4. Report: For each task, there should be three contents to explain your idea and results:
 
    1. Visual performance: You can take screenshots and give a necessary explanation in your report to describing the results you observed. 
-   2. Comparison table: Record the errors and losses in different hyperparameters/training parameter/task conditions. The conditions represent the [noise_scaling](./todo_ml_motion_denoising.py#L10) and [between_frame](./todo_ml_motion_interpolation.py#L109) number. 
+   2. Comparison table: Record the errors and losses(follow the calculation from example file) in different hyperparameters/training parameter/task conditions. The conditions represent the [noise_scaling](./todo_ml_motion_denoising.py#L10) and [between_frame](./todo_ml_motion_interpolation.py#L109) number. 
 
 
 **Tips**:
