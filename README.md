@@ -56,7 +56,7 @@ This tutorial will teach you how to implement a basic rigid body dynamics solver
 
 All the materials to help you get started have been uploaded to the folder [pba_tutorial1_rbd](./pba_tutorial1_rbd). Start by reading the README.md file in that directory.
 
-The tutorial slides can be found [[here](../pba_tutorial1_rbd.pdf)].
+The tutorial slides can be found [[here](./pba_tutorial1_rbd.pdf)].
 
 ## Assignment 3 - TBA
 
