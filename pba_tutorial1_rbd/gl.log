@@ -1,0 +1,10 @@
+GL_LOG_FILE log. local time Thu Mar  3 20:55:05 2022
+
+renderer: Mesa Intel(R) HD Graphics 5500 (BDW GT2)
+version: 4.6 (Core Profile) Mesa 21.2.6
+creating shader from /home/floyd/hku/class-material2022/rb-tutorial/test_vs.glsl...
+shader compiled. index 1
+creating shader from /home/floyd/hku/class-material2022/rb-tutorial/test_fs.glsl...
+shader compiled. index 2
+created programme 3. attaching shaders 1 and 2...
+program 3 GL_VALIDATE_STATUS = GL_TRUE
