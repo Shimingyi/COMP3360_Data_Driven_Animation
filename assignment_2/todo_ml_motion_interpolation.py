@@ -115,6 +115,46 @@ if __name__ == '__main__':
         print_freq = len(train_dataloader) // 10
         model.train()
         for batch_idx, (batch_rotations, _, batch_root_positions, file_name) in enumerate(train_dataloader):
+            '''
+            There can be different ways to describe interpolation task
+            Select one of them, or design it by yourself. Any ideas are welcome.
+
+            Example 1: follow the same way in task 1, with 'keyframes' as interpolation indices
+            In this case, the shape of input and targer tensor will be same           
+            batch_input:  [batch_size, joint_number*rotation_values, model_clip_size] -> 128, 31*4, 15
+            batch_target:  [batch_size, joint_number*rotation_values, model_clip_size] -> 128, 31*4, 15
+            '''
+            # batch_rotations_reshape = batch_rotations.reshape((batch_rotations.shape[0], batch_rotations.shape[1], -1)).transpose(1, 2)
+            # batch_input = torch.zeros((batch_rotations.shape[0], test_dataset.__get_feature_number__(), model_clip_size))
+            # batch_input[:, keyframes] = batch_rotations_reshape[:, keyframes]
+            # batch_target = batch_rotations_reshape
+
+            '''
+            Example 2: use keyframes as input 
+            In this case, the shape of the input and target tensor will be different, so the network should be able to change the tensor dimension              batch_target:  [batch_size, joint_number*rotation_values, model_clip_size] -> 128, 31*4, 12
+            batch_input:  [batch_size, joint_number*rotation_values, model_clip_size] -> 128, 31*4, 3
+            '''
+            # batch_rotations_reshape = batch_rotations.reshape((batch_rotations.shape[0], batch_rotations.shape[1], -1)).transpose(1, 2)
+            # batch_input = torch.zeros((batch_rotations.shape[0], test_dataset.__get_feature_number__(), len(keyframes)))
+            # batch_input[...] = batch_rotations_reshape[..., keyframes]
+            # rest_frames = np.delete(np.arange(0, model_clip_size), keyframes)
+            # batch_target = batch_rotations_reshape[..., rest_frames]
+
+            '''
+            Example 3: take out all the middle frames, and reconstruct them with beginning frames and ending frames            batch_target:  [batch_size, joint_number*rotation_values, model_clip_size] -> 128, 31*4, 5
+            batch_input:  [batch_size, joint_number*rotation_values, model_clip_size] -> 128, 31*4, 10
+            batch_target:  [batch_size, joint_number*rotation_values, model_clip_size] -> 128, 31*4, 5
+            '''
+            # batch_rotations_reshape = batch_rotations.reshape((batch_rotations.shape[0], batch_rotations.shape[1], -1)).transpose(1, 2)
+            # batch_beginning = batch_rotations_reshape[..., :OFFSET]
+            # batch_middle = batch_rotations_reshape[..., OFFSET:-OFFSET]
+            # batch_ending = batch_rotations_reshape[..., -OFFSET:]
+            # batch_target = batch_middle
+            # batch_input = torch.cat([batch_beginning, batch_ending], axis=-1)
+            
+            if torch.cuda.is_available():
+                batch_input, batch_target = batch_input.cuda(), batch_target.cuda()
+            
             ### Your implementation here
             print
 
