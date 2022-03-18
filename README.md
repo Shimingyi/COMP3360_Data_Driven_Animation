@@ -58,7 +58,7 @@ All the materials to help you get started have been uploaded to the folder [pba_
 
 The tutorial slides can be found [[here](./pba_tutorial1_rbd.pdf)].
 
-### Tutorial 1 - Cloth dynamics
+### Tutorial 2 - Cloth dynamics
 
 This tutorial will teach you how to implement a basic cloth simulator in C++. 
 
