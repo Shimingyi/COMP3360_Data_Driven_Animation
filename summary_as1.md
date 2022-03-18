@@ -178,7 +178,7 @@ set_cube_animation(all_obj, rotations, parents, positions, offsets, frametime)
 
 ##Score Distribution
 
-<img width="354" alt="20220318144600" src="https://user-images.githubusercontent.com/7709951/158950976-ec6456dd-f861-42f1-b7c7-b67a9d459764.png">
+<img width="360" alt="20220318153612" src="https://user-images.githubusercontent.com/7709951/158957141-c035eb36-749d-45ea-aade-25fdc3c2cb99.png">
 
 Some students missed some files in the submission; I left comments on Moodle Grade System; pls check it and argue it with me. 
 
