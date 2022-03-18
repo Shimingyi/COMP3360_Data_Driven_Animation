@@ -164,8 +164,8 @@ if __name__ == '__main__':
         if torch.cuda.is_available():
             batch_input = batch_input.cuda()
         deep_latent, output = model(batch_input)
-        outputs.append(output.transpose(1, 2).cpu().detach().numpy() if torch.cuda.is_available() else output.detach().numpy())
-        real_rotations.append(batch_input.transpose(1, 2).cpu().detach().numpy() if torch.cuda.is_available() else batch_input.detach().numpy())
+        outputs.append(output.transpose(1, 2).cpu().detach().numpy() if torch.cuda.is_available() else output.transpose(1, 2).detach().numpy())
+        real_rotations.append(batch_input.transpose(1, 2).cpu().detach().numpy() if torch.cuda.is_available() else batch_input.transpose(1, 2).detach().numpy())
         real_root_positions.append(batch_root_positions.cpu().detach().numpy() if torch.cuda.is_available() else batch_root_positions.detach().numpy())
         file_names += file_name*model_clip_size
 
