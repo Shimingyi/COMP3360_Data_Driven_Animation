@@ -4,11 +4,11 @@ import numpy as np
 from utils import *
 
 '''
-Your implement here: Implement more interpolation algorithms
+Your implement here: Implement more interpolation algorithms on motion interpolation task
 To-Do:
-Calculate the joint position by the hierarchical structure and joint rotation 
-* The rotation on parent joint will impact all child joint
-* Any rotation library is allowed to use, like scipy
+Complete the apply_interpolation function with two interpolation algorithms
+* Students are encouraged to use existing libraries for this, like SciPy
+* Not necessarily Bezier, such as nearest, nearest-up, slinear, quadratic which can be chosen
 * You can add parameters with your own design
 '''
 def apply_interpolation(data, keyframes, interpolation_method):
@@ -55,5 +55,6 @@ positions_fake[:, 0, :] = apply_interpolation(positions_fake[:, 0],
 
 output_file_path = '%s_interpolate_%s.bvh' % (bvh_file_path[:-4], OFFSET)
 save(output_file_path, Quaternions(rotations_fake).normalized(), positions_fake, offsets, parents, names, frametime)
+# Comment on this line if it's hard to configure the blender into you system enviroment
 subprocess.call('blender -P load_bvhs.py -- -r %s -c %s' % (bvh_file_path, output_file_path), shell=True)
 # subprocess.call('blender -P load_bvhs.py -- -r %s -c %s --render' % (bvh_file_path, output_file_path), shell=True)
