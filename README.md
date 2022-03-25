@@ -50,6 +50,11 @@ All the materials have been uploaded: [subfolder](./assignment_2)
 
 ## Physics-based animation tutorials
 
+IMPORTANT NOTES ABOUT TUTORIAL 1 AND TUTORIAL 2: 
+* For those of you having issues on Windows due to CMake and GLFW, please use the project template that is provided [here](https://github.com/chitalu/glfw-project). Follow the instructions in the corresponding readme file to build the code, WHICH creates a simple window with a green background.
+* Once you have setup the template, you can then copy all your .h, .cpp and .obj files that were provided for _each_ tutorial. Do not copy the CMake and Readme files that are provided in the original tutorial 1 and 2 templates. (also dont copy the extern/ directory).
+* Follow the usual instructions to generate the Visual Studio files (i.e. `mkdir build`, `cd build` and then `cmake ..`). The generated files will be in the created build directory.
+
 ### Tutorial 1 - Rigid body dynamics
 
 This tutorial will teach you how to implement a basic rigid body dynamics solver in C++. 
