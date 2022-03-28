@@ -27,8 +27,6 @@ All the materials have been uploaded: [subfolder](./assignment_1)
 * An IK solver in Unity (30%)
 * Report (10%)
 
-
-
 ## Assignment 2 - Data-Driven Character Animation
 
 This assignment will teach you how to observe motion data and process it with different tools like the mathematics interpolation algorithm and AutoEncoder model. Given a motion clip shaped with (T, J, R), understanding the difference between temporal and spatial dimensions will be the key to processing it. You will practice it by following tasks.
@@ -66,11 +64,31 @@ All the materials to help you get started have been uploaded to the folder [pba_
 
 The tutorial slides can be found [here])(./pba_tutorial2_cloth.pdf) 
 
-## Assignment 3 - TBA
+### Tutorial 3 - FEM deformation dynamics
 
+This tutorial will teach you how to implement volumetric deformation using FEM in C++. 
 
+All the materials to help you get started have been uploaded to the folder [pba_tutorial3_fem](./pba_tutorial3_fem). 
 
+The tutorial slides can be found [here])(./pba_tutorial3_fem.pdf) 
 
+### :warning: Assignment 3 : Hyperelastic deformation
 
+In this assignment, you will work with the C++ programming language to learn about implementing
+different hyperelastic material models and numerical integration schemes that you encountered during the lectures.
 
-Pls, contact myshi@cs.hku.hk if there is any question.
+The final assignment should be submitted as a .zip file which contains only the source files of your
+project. Do not include pre-compiled binaries (!) unless absolutely necessary. For non-coding tasks,
+please submit an additional file that contains your answers.
+
+Since this assignment is a direct extension of Tutorial 3 (FEM deformation dynamics), all software-related codes will uploaded to the folder [pba_tutorial3_fem](./pba_tutorial3_fem).
+
+#### Deadline
+
+The dealine for this assignment is TODO
+
+#### Tasks and requirements
+
+There are two parts to this assignment, theory and practical. For the theory, you are required to provided answers to a total of three questions with each one worth 5 points out of 100. For the practical, you are required to implement at least three hyperlastic constitutive models (1st Piola Kirchhoff stress tensors) and at least three numerical integration schemes of your choice. In addition, provide a brief explanation for your choice of each constitutive model and integration scheme, emphasising its advantages and dissadvantages.
+
+Pls, contact myshi@cs.hku.hk or chitalu@hku.hk if there is any question.
