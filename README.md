@@ -70,7 +70,7 @@ This tutorial will teach you how to implement volumetric deformation using FEM i
 
 All the materials to help you get started have been uploaded to the folder [pba_tutorial3_fem](./pba_tutorial3_fem). 
 
-The tutorial slides can be found [here])(./pba_tutorial3_fem.pdf) 
+The tutorial slides can be found [here](./pba_tutorial3_fem.pdf) 
 
 ### :warning: Assignment 3 : Hyperelastic deformation
 
@@ -78,17 +78,17 @@ In this assignment, you will work with the C++ programming language to learn abo
 different hyperelastic material models and numerical integration schemes that you encountered during the lectures.
 
 The final assignment should be submitted as a .zip file which contains only the source files of your
-project. Do not include pre-compiled binaries (!) unless absolutely necessary. For non-coding tasks,
-please submit an additional file that contains your answers.
+project. Do not include pre-compiled binaries (!) unless deemed absolutely necessary. For non-coding tasks,
+please submit additional files that contain your answers.
 
-Since this assignment is a direct extension of Tutorial 3 (FEM deformation dynamics), all software-related codes will uploaded to the folder [pba_tutorial3_fem](./pba_tutorial3_fem).
+This assignment is in essence a direct extension of Tutorial 3 (FEM deformation dynamics), all software-related codes will uploaded to the folder [pba_tutorial3_fem](./pba_tutorial3_fem).
 
 #### Deadline
 
-The dealine for this assignment is TODO
+The deadline for this assignment is 22 April 2022
 
-#### Tasks and requirements
+#### Instructions
 
-There are two parts to this assignment, theory and practical. For the theory, you are required to provided answers to a total of three questions with each one worth 5 points out of 100. For the practical, you are required to implement at least three hyperlastic constitutive models (1st Piola Kirchhoff stress tensors) and at least three numerical integration schemes of your choice. In addition, provide a brief explanation for your choice of each constitutive model and integration scheme, emphasising its advantages and dissadvantages.
+Refer to the document [here](./assignment_3/instructions.pdf) for detailed instructions about this assignment. 
 
 Pls, contact myshi@cs.hku.hk or chitalu@hku.hk if there is any question.
