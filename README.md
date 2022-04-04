@@ -78,6 +78,12 @@ All the materials to help you get started have been uploaded to the folder [pba_
 
 The tutorial slides can be found [here](./pba_tutorial3_fem.pdf) 
 
+Here are two examples of the expected output:
+
+![output1](./pba_tutorial3_fem/expected-output1.png)
+
+![output2](./pba_tutorial3_fem/expected-output2.png)
+
 ### :warning: Assignment 3 : Hyperelastic deformation
 
 In this assignment, you will work with the C++ programming language to learn about implementing
