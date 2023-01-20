@@ -12,6 +12,19 @@ TAs: @[Mingyi Shi](https://rubbly.cn)  @[Huancheng Lin](https://github.com/LamWS
 
 ## Assignment 1 - Basic Character Animation
 
+In this assignment, you will learn the basic data structure and animation creation pipeline and are required to create an animation clip with provided Infrastructure. Also, you need to understand the mathematics in FK and IK to read the motion capture files and play with them.
+
+#### Tutorial Slides
+
+TBA
+
+#### Assessments
+
+- A rendered video with character animation (Task1, 40%)
+- Forward Kinematics and visualizing (Task2.1, 25%)
+- An IK solver (Task2.2, 25%)
+- Report (10%)
+
 
 ## Assignment 2 - TBA
 
