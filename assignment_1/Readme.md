@@ -10,12 +10,6 @@ In this assignment, you will learn the basic data structure and animation creati
 
 The experiment environment is re-designed by [GAMES105](https://github.com/GAMES-105/GAMES-105), thanks for the open sourcing.
 
-![20230214001730](https://user-images.githubusercontent.com/7709951/218512528-a44a8ffc-e9bb-43e5-8b6a-ebbdfd1e8141.jpg)
-
-<p align="center">
-desired results for Task 2 & 3
-</p>
-
 #### Submission
 
 File format: A compress file [uid_name_assignment1.zip] with:
@@ -23,6 +17,21 @@ File format: A compress file [uid_name_assignment1.zip] with:
 1. video_file
 2. task2_forward_kinematic.py, task3_inverse_kinematic.py
 3. uid_name_1.pdf
+
+## Examples
+
+<p align="center">
+Desired results for Task 1 (from students in 2022)
+</p>
+
+![video3](https://user-images.githubusercontent.com/7709951/158897304-7759b671-0a62-4c64-934c-d6be46fdbca1.gif)
+
+<p align="center">
+Desired results for Task 2 & 3
+</p>
+
+![20230214001730](https://user-images.githubusercontent.com/7709951/218512528-a44a8ffc-e9bb-43e5-8b6a-ebbdfd1e8141.jpg)
+
 
 ## Task 1 - A rendered video with character animation(40%)
 
