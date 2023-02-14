@@ -1,3 +1,6 @@
+# Name:  
+# UID:  
+
 import numpy as np
 from scipy.spatial.transform import Rotation as R
 
@@ -82,7 +85,7 @@ def part2_forward_kinametic(viewer, joint_names, joint_parents, joint_offsets, j
                like: r1 = R.from_quat(global_joint_orientations[:, joint_idx, :])
             2. Then R.apply() can apply this rotation to any vector
                like: rotated_offset = r1.apply(vector)
-            3. new_joint_position = parent_joint_position + parent_joint_rotation.apply(rotated_offset)
+            3. new_joint_position = parent_joint_position + rotated_offset
                
     '''
     ########## Code Start ############
@@ -101,9 +104,9 @@ def part2_forward_kinametic(viewer, joint_names, joint_parents, joint_offsets, j
 
             def update_func(self, viewer_):
                 cur_joint_position = global_joint_positions[self.current_frame]
-                cur_joint_orentation = global_joint_orientations[self.current_frame]
+                cur_joint_orientation = global_joint_orientations[self.current_frame]
                 viewer.show_pose(
-                    joint_names, cur_joint_position, cur_joint_orentation)
+                    joint_names, cur_joint_position, cur_joint_orientation)
                 self.current_frame = (self.current_frame + 1) % frame_number
 
         handle = UpdateHandle()
