@@ -56,6 +56,7 @@ conda install numpy scipy
 pip install panda3d
 
 # Enviromtns verification. After running, you should see a skeleton in a 3D space
+# If you are using Appli-Silicon Chip and meet black screen problem, check this ISSUE: https://github.com/Shimingyi/COMP3360_Data_Driven_Animation/issues/4
 cd ./assignment_1
 python env_test.py
 ```
