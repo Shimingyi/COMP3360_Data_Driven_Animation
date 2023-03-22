@@ -126,9 +126,9 @@ If you want to modify the variables in the motion matching code *[task2_motion_m
 2. In line 420, you must determine which features to use by filling in their names in the *selected_feature_names* variable and their weights in the *selected_feature_weights* variable. Note that all features used must be present in the mapping variable.
 3. Line 190 requires the implementation of feature calculation based on the variables provided (pos, rot, vel, and avel). Some hints and nesscery functiones has been provided in this class, they are: extract_vel, extract_offset, extract_rotation and extract_future_pos(rot).
 
-So basiclly, just remember: **For** **the feature you wanna use, you should present it in the mapping varaible and calculation function.**
+So basiclly, just remember: **For** **the feature you wanna use, you should present it in the mapping varaible and calculation function.** If you meet any question or have no idea about how to start, have a look on the tutorial video, I demonstrate some examples there.
 
-We suggest using fewer variables to achieve realistic performance. And the grading of this part will be cauculate by your variable number.
+We suggest using fewer variables to achieve realistic performance. And the grading of this part will depend on your variable number.
 
 ## Task 4 - Report
 
