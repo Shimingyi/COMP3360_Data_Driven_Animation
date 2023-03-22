@@ -38,9 +38,29 @@ Details: [[subfolder](./assignment_1)]
 
 ## Assignment 2 - Animation Processing and Scripting
 
-This assignment will teach you how to play with animation data by different algorithms like the interpolation, DTW (Dynamic Time Warping) and a Motion Matching. 
+This assignment will provide a practical introduction to working with animation data through various algorithms such as interpolation and concatenation. Additionally, you will learn to consider various variables from motion data to enhance the performance of the motion matching method.
 
 Detials: [[subfolder](./assignment_2)]
+
+#### Tutorial Slides
+
+1. Basic motion processing [[slides](./COMP3360_ANI_T3.pdf)]
+2. Interactive Animation System [[slides](./COMP3360_ANI_T4.pdf)]
+
+#### Assessments
+
+* part1_key_framing (30%)
+  * Linear interpolation (10%); Slerp Interpolation (15%)
+  * Report the different performance by giving different numbers (5%)
+* part2_concatenation (35%)
+  * Define the search window (10%) + Calculate the sim_matrix (10%);
+  * Find the real_i and real_j (10%);
+  * The shifting on the root joint position (5)
+* part3_motion_matching (25%)
+  * A working system (10%)
+  * Variable terms (22% - your_variable_num)
+* Report (8%) + 2 videos (2%)
+  * Including necessary experiment results by *different parameters* (4%) and your *thinking*(4%) for how to produce high quality motions.
 
 ## Assignment 3 - TBA
 
