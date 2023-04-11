@@ -243,6 +243,6 @@ while window.running:
                two_sided=True,
                show_wireframe=True)
 
-    scene.lines(frame_vertices, color=(1, 0, 0), width=0.1)
+    scene.lines(frame_vertices, color=(1, 0, 0), width=1)
     canvas.scene(scene)
     window.show()
