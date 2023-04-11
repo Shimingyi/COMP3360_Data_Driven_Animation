@@ -5,7 +5,7 @@
 [Bb]uilds/
 __pycache__/
 Assets/AssetStoreTools*
-
+.DS_Store
 # Visual Studio cache directory
 .vs/
 
