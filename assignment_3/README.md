@@ -42,8 +42,8 @@ $ conda activate comp3360
 $ conda install numpy scipy
 $ pip install panda3d taichi
 
-$ cd ./practice
-$ python simulation.py
+$ cd ./assignment_3
+$ python rigid_body_dynamic.py
 ```
 
 ### From the existing environment for Assignment1&2
