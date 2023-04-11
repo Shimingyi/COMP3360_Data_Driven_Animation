@@ -59,6 +59,8 @@ You are required to implement **7** `TODO` to update the rigid body state in rig
 
 Feel free to use your mesh or change the simulation parameters(initial_velocity, etc.).
 
+You are strongly suggested to spend 30-60 mins to go through https://www.cs.cmu.edu/~baraff/sigcourse/notesd1.pdf, before doing any implementation.
+
 ## Task 2 (Bonus)
 
 Once you have implemented the basic simulator, there is an opportunity to enhance its functionality by adding additional features. For instance, you may consider implementing damping and friction to improve the simulator. 
