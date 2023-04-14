@@ -29,6 +29,19 @@ By the end of this assignment, you will have gained a solid understanding of the
 
 ## Examples
 
+Here are some examples of the sucessfully implemented simulator.
+
+Ball Dropping without changing any of the simulation parameters.
+
+https://user-images.githubusercontent.com/43705353/231971484-f043cb9c-b53b-43cc-9220-c69b3c60fc4c.mov
+
+Ball Dropping with initial velocity [3, 0, 0].
+
+https://user-images.githubusercontent.com/43705353/231971532-9dbb1d88-3a20-43a2-a686-1ff2d806248a.mov
+
+Ball Dropping with initial velocity [3, 0, 0] and collision damping stiffness 1e4, friction coefficient 0.5 on the ground.
+
+https://user-images.githubusercontent.com/43705353/231971536-5b57bb7c-e12c-49bd-806f-c7208e933eb1.mov
 
 
 ## Environment
