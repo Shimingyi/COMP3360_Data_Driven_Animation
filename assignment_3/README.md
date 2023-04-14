@@ -37,12 +37,11 @@ https://user-images.githubusercontent.com/43705353/231971484-f043cb9c-b53b-43cc-
 
 Ball Dropping with initial velocity [3, 0, 0].
 
-https://user-images.githubusercontent.com/43705353/231971532-9dbb1d88-3a20-43a2-a686-1ff2d806248a.mov
+https://user-images.githubusercontent.com/43705353/231971536-5b57bb7c-e12c-49bd-806f-c7208e933eb1.mov
 
 Ball Dropping with initial velocity [3, 0, 0] and collision damping stiffness 1e4, friction coefficient 0.5 on the ground.
 
-https://user-images.githubusercontent.com/43705353/231971536-5b57bb7c-e12c-49bd-806f-c7208e933eb1.mov
-
+https://user-images.githubusercontent.com/43705353/231971532-9dbb1d88-3a20-43a2-a686-1ff2d806248a.mov
 
 ## Environment
 
