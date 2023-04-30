@@ -182,8 +182,8 @@ def substep():
 
     # update the rigid body
     # TODO 5: update the center of mass position and velocity
-    # body_cm_position[None] +=
     # body_velocity[None] +=
+    # body_cm_position[None] +=
 
     # TODO 6: update the rotation quaternion
     # d_q = 0.5 * quaternion_multiplication(ti.Vector([0, ?, ?, ?]), body_rotation_quaternion[None])
@@ -194,8 +194,9 @@ def substep():
     body_rotation[None] = quaternion_to_matrix(body_rotation_quaternion[None])
 
     # TODO 7: update, the angular momentum, inertia tensor and angular velocity
+    # hint: use A @ B to do matrix multiplication, use A.transpose() to get the transpose of A
     # body_angular_momentum[None] =
-    # body_inverse_inertia_body[None] =
+    # body_inverse_inertia =
     # body_angular_velocity[None] =
 
     # update the particles
@@ -206,23 +207,9 @@ def substep():
 
 
 # GUI stuff
-# draw a cube frame
-frame_vertices = ti.Vector.field(3, dtype=float, shape=24)
-vertices_list = [
-    [-1, -1, 0], [1, -1, 0], [1, -1, 0], [1, 1, 0],
-    [1, 1, 0], [-1, 1, 0], [-1, 1, 0], [-1, -1, 0],
-    [-1, -1, 1], [1, -1, 1], [1, -1, 1], [1, 1, 1],
-    [1, 1, 1], [-1, 1, 1], [-1, 1, 1], [-1, -1, 1],
-    [-1, -1, 0], [-1, -1, 1], [1, -1, 0], [1, -1, 1],
-    [1, 1, 0], [1, 1, 1], [-1, 1, 0], [-1, 1, 1]
-]
-for i in range(len(vertices_list)):
-    frame_vertices[i] = ti.Vector(vertices_list[i])
-
 # rendering frame rate is 1/60
 substeps = int(1 / 60 // dt)
 current_t = 0.0
-
 
 np_vertex_positions = particle_vertices.to_numpy()
 
@@ -236,6 +223,7 @@ def draw_mesh():
             glVertex3fv(np_vertex_positions[face[(i + 1) % 3]])
     glEnd()
 
+
 def draw_cube_frame():
     glColor3f(1, 0, 0)  # Set line color to red
     glBegin(GL_LINES)
@@ -247,6 +235,7 @@ def draw_cube_frame():
         glVertex3fv(vertices[e[0]])
         glVertex3fv(vertices[e[1]])
     glEnd()
+
 
 def update_mesh():
     global np_vertex_positions, current_t
