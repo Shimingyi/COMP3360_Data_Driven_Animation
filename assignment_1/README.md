@@ -99,6 +99,13 @@ You are required to implement two functions in *[task2_forward_kinematic.py](htt
 1. Starting from Line 8, there is a function called *part1_show_T_pose*. We should fill in the code based on the instruction. Then uncomment line 131 and run the script for calling the function. You can see a T-Pose centered with (0, 0, 0).
 2. Starting from Line 45, there is a function called *part2_forward_kinametic*. We should fill in the code based on the instruction. Then uncomment line 134 and run the script for calling the function. You can see a walking motion if show_animation is set to True otherwise a static
 
+```python
+# Inside the main function, you need to remove the commend in the beginning for testing different functions
+
+# part1_show_T_pose(viewer, joint_names, joint_parents, joint_offsets)
+# part2_forward_kinametic(viewer, joint_names, joint_parents, joint_offsets, local_joint_positions, local_joint_rotations, show_animation=True)
+```
+
 Screenshot of T-pose and walking motion will be expected in the assignment report.
 
 ## Task 3 - Inverse Kinematics - CCD IK
@@ -121,7 +128,17 @@ The CCD IK is the default option in the code, we provided almost code modules al
 You are required to implement one function in *[task3_inverse_kinematic.py](https://github.com/Shimingyi/COMP3360_Data_Driven_Animation/blob/2024/assignment_1/task3_inverse_kinematic.py)* and try different IK settings(iteration number/start joint/end joint/target position), then report them with a screenshot and comparison table.
 
 * The function is started from line 48. And only a few lines will be needed to fill.
-* Any other IK implementation will be welcome, and a bonus will be given.
+* Any other IK implementation will be welcome.
+
+```python
+# Inside the main function, you need to remove the commend in the beginning for testing different IK configrations
+
+IK_example(viewer, np.array([0.5, 0.75, 0.5]), 'RootJoint', 'lWrist_end')
+# IK_example(viewer, np.array([0.5, 0.75, 0.5]), 'lToeJoint_end', 'lWrist_end')
+# IK_interactive(viewer, np.array([0.5, 0.75, 0.5]), 'RootJoint', 'lWrist_end')
+# IK_interactive(viewer, np.array([0.5, 0.75, 0.5]), 'lToeJoint_end', 'lWrist_end')
+# IK_interactive(viewer, np.array([0.5, 0.75, 0.5]), 'rToeJoint_end', 'lWrist_end')
+```
 
 ## Task 4 - Report
 
