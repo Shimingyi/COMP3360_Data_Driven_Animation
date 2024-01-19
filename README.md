@@ -37,5 +37,9 @@ Details: [[subfolder](./assignment_1)]
 - Core code implementation of Inverse Kinematics - CCD IK (Task 3, 25%)
 - Report (10%)
 
+#### Useful tutorials of Blender
+ - [Basic operations of Blender](https://www.youtube.com/watch?v=B0J27sf9N1Y)
+ - [Character rigging](https://www.youtube.com/watch?v=9dZjcFW3BRY)
+ - [Keyframing animation](https://youtu.be/yjjLD3h3yRc?si=_-X3Nb3PRaNWeq6h) 
 
 Pls, contact zycliao@cs.hku.hk or myshi@cs.hku.hk if there is any question.
