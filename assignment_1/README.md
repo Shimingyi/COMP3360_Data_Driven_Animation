@@ -1,8 +1,7 @@
 # Assignment 1 - Basic Character Animation
 
-<!-- ## Highlights
 
-* Submission DDL: Feb. 28th -->
+* Submission DDL: Feb. 19th (Monday)
 
 ## Introduction
 
