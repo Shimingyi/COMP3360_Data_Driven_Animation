@@ -42,4 +42,28 @@ Details: [[subfolder](./assignment_1)]
  - [Character rigging](https://www.youtube.com/watch?v=9dZjcFW3BRY)
  - [Keyframing animation](https://youtu.be/yjjLD3h3yRc?si=_-X3Nb3PRaNWeq6h) 
 
+## Assignment 2 - Animation Processing and Scripting
+
+This assignment will provide a practical introduction to working with animation data through various algorithms such as interpolation and concatenation. Additionally, you will learn to consider various variables from motion data to enhance the performance of the motion matching method.
+
+Detials: [[subfolder](./assignment_2)]
+
+#### Tutorial Slides
+
+1. Basic motion processing [[slides](./COMP3360_ANI_T3.pdf)]
+
+#### Assessments
+
+* part1_key_framing (30%)
+  * Linear interpolation (10%); Slerp Interpolation (15%)
+  * Report the different performance by giving different numbers (5%)
+* part2_concatenation (35%)
+  * Define the search window (10%) + Calculate the sim_matrix (10%);
+  * Find the real_i and real_j (10%);
+  * The shifting on the root joint position (5)
+* part3_motion_matching (25%)
+  * TBA
+* Report (8%) + 2 videos (2%)
+  * Including necessary experiment results by *different parameters* (4%) and your *thinking*(4%) for how to produce high quality motions.
+
 Pls, contact zycliao@cs.hku.hk or myshi@cs.hku.hk if there is any question.
