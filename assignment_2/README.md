@@ -118,7 +118,32 @@ Additionally, you will be eligible for bonus points if you can find ways to addr
 
 ## Task 3 - Motion Matching
 
-TBA
+Motion matching is a sophisticated technology used in real-time character control systems. In this section, using a basic motion matching framework, you will required to design the matching variables and experiement how these variables impact the matching quality.
+
+If you want to modify the variables in the motion matching code *[task2_motion_matching.py](https://github.com/Shimingyi/COMP3360_Data_Driven_Animation/blob/2024/assignment_2/task2_motion_matching.py)*, you should pay attention to the following three parts:
+
+1. Line 24 contains a feature mapping variable that records all feature shapes. While some features are already prepared, additional features with specific names can also be included by yourself.
+2. In line 420, you must determine which features to use by filling in their names in the *selected_feature_names* variable and their weights in the *selected_feature_weights* variable. Note that all features used must be present in the mapping variable.
+3. Line 190 requires the implementation of feature calculation based on the variables provided (pos, rot, vel, and avel). Some hints and nesscery functiones has been provided in this class, they are: extract_vel, extract_offset, extract_rotation and extract_future_pos(rot).
+
+So basiclly, just remember: **For** **the feature you wanna use, you should present it in the mapping varaible.** And also, around L190, it should have the implementation about its calculation.
+
+We suggest using fewer variables to achieve realistic performance. And the grading of this part will depend on your variable number.
+
+## Assessments
+
+* part1_key_framing (30%)
+  * Linear interpolation (10%); Slerp Interpolation (15%)
+  * Report the different performance by giving different numbers (5%)
+* part2_concatenation (35%)
+  * Define the search window (10%) + Calculate the sim_matrix (10%);
+  * Find the real_i and real_j (10%);
+  * The shifting on the root joint position (5)
+* part3_motion_matching (25%)
+  * Less variables, and better performance(total 15%, 22% - your_variable_num)
+  * System analyzation (10%) about variable selection, future frame range, etc.
+* Report (8%) + 2 videos (2%)
+  * Including necessary experiment results by *different parameters* (4%) and your *thinking*(4%) for how to produce high quality motions.
 
 ## Task 4 - Report
 

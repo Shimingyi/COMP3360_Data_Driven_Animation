@@ -13,9 +13,11 @@ TAs: @[Mingyi Shi](https://rubbly.cn)  @[Zhouyingcheng Liao](https://zycliao.com
 ## Instruction
 
 * Get the latest version of this repo
-``` shell
+
+```shell
 git clone https://github.com/Shimingyi/COMP3360_Data_Driven_Animation.git -b 2024
 ```
+
 * Don't hesitate to seek helps with issue workspace
 
 ## Assignment 1 - Basic Character Animation
@@ -38,9 +40,10 @@ Details: [[subfolder](./assignment_1)]
 - Report (10%)
 
 #### Useful tutorials of Blender
- - [Basic operations of Blender](https://www.youtube.com/watch?v=B0J27sf9N1Y)
- - [Character rigging](https://www.youtube.com/watch?v=9dZjcFW3BRY)
- - [Keyframing animation](https://youtu.be/yjjLD3h3yRc?si=_-X3Nb3PRaNWeq6h) 
+
+- [Basic operations of Blender](https://www.youtube.com/watch?v=B0J27sf9N1Y)
+- [Character rigging](https://www.youtube.com/watch?v=9dZjcFW3BRY)
+- [Keyframing animation](https://youtu.be/yjjLD3h3yRc?si=_-X3Nb3PRaNWeq6h)
 
 ## Assignment 2 - Animation Processing and Scripting
 
@@ -51,6 +54,7 @@ Detials: [[subfolder](./assignment_2)]
 #### Tutorial Slides
 
 1. Basic motion processing [[slides](./COMP3360_ANI_T3.pdf)]
+2. Real-time Character Control [[slides](./COMP3360_ANI_T4.pdf)]
 
 #### Assessments
 
@@ -62,7 +66,8 @@ Detials: [[subfolder](./assignment_2)]
   * Find the real_i and real_j (10%);
   * The shifting on the root joint position (5)
 * part3_motion_matching (25%)
-  * TBA
+  * Less variables, and better performance(total 15%, 22% - your_variable_num)
+  * System analyzation (10%) about variable selection, future frame range, etc.
 * Report (8%) + 2 videos (2%)
   * Including necessary experiment results by *different parameters* (4%) and your *thinking*(4%) for how to produce high quality motions.
 
