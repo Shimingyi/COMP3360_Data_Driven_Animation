@@ -2,7 +2,7 @@
 
 ## Highlights
 
-* Submission DDL: TBA
+* Submission DDL: 18th, March (Mon)
 
 ## Introduction
 
