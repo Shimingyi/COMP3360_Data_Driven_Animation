@@ -53,7 +53,7 @@ https://user-images.githubusercontent.com/43705353/231973213-6caa0c81-3eab-4b0f-
 
 ```bash
 # recommend to use Anaconda to manage enviroment 
-$ conda create -n comp3360 python=3.8
+$ conda create -n comp3360 python=3.10
 $ conda activate comp3360
 $ conda install numpy scipy
 $ pip install panda3d taichi
