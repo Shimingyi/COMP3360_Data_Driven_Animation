@@ -21,6 +21,9 @@ which offers a parallelizable method for solving position-based constraints for 
 ## Examples
 A successful implementation of the PBD simulator (with the default parameters) should produce a video similar to the following:
 
+https://github.com/Shimingyi/COMP3360_Data_Driven_Animation/assets/25116439/fc6930aa-959a-4751-80af-6bbc7a023779
+
+
 ## Environment
 Same as Assignment 3. If you want to save the video directly by Taichi, you need to install ffmpeg.
 
@@ -29,7 +32,7 @@ $ conda activate comp3360
 $ conda install ffmpeg
 ```
 
-## Task 1 - Basic PBD Simulator (80%)
+## Task 1 - PBD Simulator based on Jacobi Approach (80%)
 
 You are required to implement **3** `TODO` in `cloth_pbd.py`. Please check the hints in the comments.
 
