@@ -40,12 +40,15 @@ You are required to implement **3** `TODO` in `cloth_pbd.py`. Please check the h
 ## Task 2 - Collision with a Mesh (Bonus)
 
 Once you have implemented the basic simulator, there is an opportunity to enhance its functionality by adding extra features.
-For example, support for collision with a mesh instead of a simple sphere. 
+For example, support for collision with a mesh (a example mesh `torus.obj` is available) instead of a simple sphere.
+
 The idea is still similar to the sphere collision, i.e., detect if the point is inside the mesh and then project it out.
 An easy way is first compute the vertex normal for the obstacle mesh.
 Then, for every point of the cloth, find its closest point on the obstacle mesh.
 If the displacement from the obstacle point to the cloth point have a negative dot product with the normal, then the point is inside the obstacle.
 In this case, you can project the point out along the normal direction.
+
+Or a better way is to use the signed distance field (SDF) of the mesh to compute the penetration depth and direction.
 
 ## Task 3 Report (20%)
 
