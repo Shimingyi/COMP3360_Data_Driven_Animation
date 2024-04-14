@@ -36,6 +36,7 @@ $ conda install ffmpeg
 
 You are required to implement **3** `TODO` in `cloth_pbd.py`. Please check the hints in the comments.
 
+Note that to fix the corner of the cloth, you need to keep vertex 0 and vertex 1 fixed by not updating their positions.
 
 ## Task 2 - Collision with a Mesh (Bonus)
 

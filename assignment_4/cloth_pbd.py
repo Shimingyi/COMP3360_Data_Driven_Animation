@@ -90,6 +90,8 @@ def strain_limiting():
     # Variables you can use: X (vertex position), E (edges, i.e., indices of two vertices each edge connects),
     # L (edge length), sum_X, sum_N, alpha (blend factor)
     # There is no need to update velocity here. You only need to update the position.
+    # To fix the corner of the cloth, you need to keep the vertex 0 and vertex 1 fixed.
+    pass
 
 @ti.kernel
 def collision_handling():
@@ -97,6 +99,7 @@ def collision_handling():
     # when the cloth vertex falls within the collision sphere, push it back to the sphere surface
     # Simply find the closest point on the sphere surface and move the vertex to that point
     # Variables you can use: X (vertex position), c (collision sphere position), r (collision sphere radius)
+    # To fix the corner of the cloth, you need to keep the vertex 0 and vertex 1 fixed.
     pass
 
 
@@ -109,6 +112,8 @@ def update():
             # TODO 3
             # 1. Update the velocity (a. multiply by damping, b. add gravity)
             # 2. Update the position X using the velocity
+            # To fix the corner of the cloth, you need to keep the vertex 0 and vertex 1 fixed.
+            pass
 
 
 def substep():
