@@ -41,7 +41,7 @@ Note that to fix the corner of the cloth, you need to keep vertex 0 and vertex 1
 ## Task 2 - Collision with a Mesh (Bonus)
 
 Once you have implemented the basic simulator, there is an opportunity to enhance its functionality by adding extra features.
-For example, support for collision with a mesh (a example mesh `torus.obj` is available) instead of a simple sphere.
+For example, support for collision with a mesh (example meshes `torus.obj` and `obstacle` are available) instead of a simple sphere.
 
 The idea is still similar to the sphere collision, i.e., detect if the point is inside the mesh and then project it out.
 An easy way is first compute the vertex normal for the obstacle mesh.
